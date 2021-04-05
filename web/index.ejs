@@ -1,0 +1,18 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type">
+	<title>Welcome to smartweb</title>
+<script>
+	<%
+	if(request.session.username) {%>
+		window.location.href = "frame/index.do";
+	<%} else {%>
+		window.location.href = "login.do";
+	<%}%>
+</script>
+</head>
+<body>
+Welcome to smartweb. <br><br>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "estorelite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "log4js": "^0.6.14",
+    "smartweb": "^2.0.5",
+    "sqlite3": "^5.0.2"
+  }
+}

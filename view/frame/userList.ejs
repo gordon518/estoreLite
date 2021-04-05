@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../plugins/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../css/demo.css">
+	<script type="text/javascript" src="../plugins/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../plugins/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function(){
+	$('#grid1').datagrid({
+		data: <%- rowset %>
+	});
+});
+	</script>
+</head>
+<body>
+	<h2>User List</h2>
+	<p>The DataGrid is created from markup, no JavaScript code needed.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<table id="grid1" class="easyui-datagrid" title="User List" style="width:700px;height:250px"
+			data-options="singleSelect:true,collapsible:true">
+		<thead>
+			<tr>
+				<th data-options="field:'username',width:150">User Name</th>
+				<th data-options="field:'password',width:150">Password</th>
+				<th data-options="field:'freezed',width:150,align:'right'">Freezed</th>
+			</tr>
+		</thead>
+	</table>
+
+</body>
+</html>

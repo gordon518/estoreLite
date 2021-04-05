@@ -1,0 +1,8 @@
+﻿[{"id":1,
+  "text":"root",
+  "state":null,
+  "iconCls":null,
+  "checked":false,
+  "attributes":null,
+  "children":[{"id":2,"text":"User List","state":null,"iconCls":null,"checked":false,"attributes":{"url":"userList.do","title":"userList"},"children":null},
+              {"id":3,"text":"User Add","state":null,"iconCls":null,"checked":false,"attributes":{"url":"userAdd.do","title":"userAdd"},"children":null}]}]

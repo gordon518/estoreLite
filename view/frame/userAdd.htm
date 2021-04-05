@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../plugins/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../css/demo.css">
+	<script type="text/javascript" src="../plugins/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../plugins/easyui/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>User Add Form</h2>
+	<p>Fill the form and submit it.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="User Add" style="width:400px">
+		<div style="padding:10px 60px 20px 60px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+	    			<td>User Name:</td>
+	    			<td><input class="easyui-textbox" type="text" name="username" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Password:</td>
+	    			<td><input class="easyui-textbox" type="text" name="password" data-options="required:true,"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Freezed:</td>
+	    			<td><input class="easyui-textbox" type="text" name="freezed"></input></td>
+	    		</tr>
+	    	</table>
+			<div style="padding:5px 0;text-align: center;color: red;" id="showMsg"></div>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">Submit</a>
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">Clear</a>
+	    </div>
+	    </div>
+	</div>
+	<script>
+		function submitForm(){
+		//ajax submit
+			$.ajax({
+				type:"POST",   //post, default is get
+	            url:"doUserAdd.do",
+		        data: $("#ff").serialize(),   //serialize
+			    error:function(request) {
+				    $("#showMsg").html(request);
+				},
+				success:function(data) {
+					if(data.code==0) {
+						$('#ff').form('clear');
+			            $("#showMsg").html(data.msg+" at "+(new Date()).toLocaleTimeString());
+	                }
+		            else {
+			            $("#showMsg").html(data.msg+" at "+(new Date()).toLocaleTimeString());
+				    }
+				}
+			});
+		}
+		function clearForm(){
+			$('#ff').form('clear');
+		}
+	</script>
+</body>
+</html>

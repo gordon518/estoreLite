@@ -1,0 +1,21 @@
+body {
+}
+
+A{TEXT-DECORATION: none;font-size:12px;}
+A:link {COLOR: #666666; FONT-FAMILY: ËÎÌו; TEXT-DECORATION: none}
+A:visited {COLOR: #666666; FONT-FAMILY: ËÎÌו; TEXT-DECORATION: none}
+A:active {FONT-FAMILY: ËÎÌו; TEXT-DECORATION: none}
+A:hover {BORDER-BOTTOM: 1px dotted; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-WIDTH: 1px; COLOR: #ff6600; TEXT-DECORATION: none}
+
+#mouseOvertip {
+	position: absolute;
+}
+
+.content {
+	border: 1px solid #888888;
+	background: #eeeeee;
+	color: #444444;
+	overflow: hidden;
+	zoom: 1;
+	position: relative;
+}
