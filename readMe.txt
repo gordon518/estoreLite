@@ -1,11 +1,11 @@
 ======Run app guide=========
 
-1. Extract this rar file to a folder, for example: c:\tmp, so the working folder is c:\tmp\estore.
+1. Install node-v12.22.
 
-2. Install node.
+2. Clone this project to your local machine from https://github.com/gordon518/estoreLite
 
-3. Open cmd window, run the following command to start the node app:
-cd c:\tmp\store
+3. Open command window, run the following command to start the node app:
+cd [thisProjectFolder]
 npm install
 node ./
 
