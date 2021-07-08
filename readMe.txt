@@ -1,6 +1,6 @@
 ======Run app guide=========
 
-1. Install node-v12.22.
+1. Install node-v12.22.0
 
 2. Clone this project to your local machine from https://github.com/gordon518/estoreLite
 
