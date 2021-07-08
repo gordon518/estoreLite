@@ -23,14 +23,14 @@ exports.getDb=function(callback) {
 	getSqliteDb(callback);
 }
 
-exports.query=function(sql,param,fn) {
+function dbQuery(sql,param,fn) {
 	var result={err:null};
 	getSqliteDb(function(db) {
 		db.all(sql, param, function(err, rows) {
 			if (err) {
 				//throw err;
-				console.log('find error: ', err);
-				result.err=err;
+				console.log('find error: ', err.stack);
+				result.err=err.stack;
 			}
 			else {
 				console.log('run sql:'+sql+",param:"+param);
@@ -38,9 +38,9 @@ exports.query=function(sql,param,fn) {
 			}
 			db.close(function(e) {
 				if(e) {
-					console.log(e);
+					console.log(e.stack);
 					if(!result.err)
-						result.err=e;
+						result.err=e.stack;
 				}
 				console.log('close sqlite database');
 				fn(result);
@@ -48,6 +48,8 @@ exports.query=function(sql,param,fn) {
 		});	
 	});
 }
+
+exports.query=dbQuery;
 
 exports.exec=function(sql,param,fn) {
 	var result={err:null};
@@ -55,17 +57,19 @@ exports.exec=function(sql,param,fn) {
 		db.run(sql, param, function(err) {
 			if (err) {
 				//throw err;
-				console.log(err);
-				result.err=err;
+				console.log(err.stack);
+				result.err=err.stack;
 			}
 			else {
 				console.log('run sql:'+sql+",param:"+param);
+				result.changes=this.changes;
+				result.lastID=this.lastID;
 			}
 			db.close(function(e) {
 				if(e) {
-					console.log(e);
+					console.log(e.stack);
 					if(!result.err)
-						result.err=e;
+						result.err=e.stack;
 				}
 				console.log('close sqlite database');
 				fn(result);
@@ -73,4 +77,3 @@ exports.exec=function(sql,param,fn) {
 		});	
 	});
 }
-
