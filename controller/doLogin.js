@@ -36,7 +36,7 @@ function checkPass(ret, fn) {
 	db.query("select password from users where username=?",[ret.username],function(result){
 		if(result.rows.length>0) {
 			var row=result.rows[0];
-			var dbPass=row["PASSWORD"];
+			var dbPass=row["password"];
 			if(dbPass==ret.password) {
 				flag=1;
 			}
