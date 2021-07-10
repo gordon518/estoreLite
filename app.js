@@ -4,4 +4,4 @@ var smart = require("smartweb");
 var log=require('./log').getLog();
 log.info("log system started!");
 
-smart.start(8080);
+smart.start(80);
