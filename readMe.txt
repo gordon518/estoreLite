@@ -9,7 +9,7 @@ cd [thisProjectFolder]
 npm install
 node ./
 
-4. Open web browser, such as firefox,chrome,IE. Go to the URL of http:\\localhost:8080 to show login page, input "aa" as username and "11" as password to login.
+4. Open web browser, such as firefox,chrome,IE. Access the URL of http:\\localhost to show login page, input "aa" as username and "11" as password to login.
 
 ======Other documents==========
 
