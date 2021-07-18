@@ -2,7 +2,8 @@
 //define log module
 var log4js = require("log4js");
 
-log4js.configure({  
+log4js.configure({
+	disableClustering: true,
 	appenders: {
 		console: {
 			type: 'console'
