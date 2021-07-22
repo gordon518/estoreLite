@@ -3,7 +3,7 @@
 var log4js = require("log4js");
 
 log4js.configure({
-	disableClustering: true,
+	//disableClustering: true,
 	appenders: {
 		console: {
 			type: 'console'
