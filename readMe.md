@@ -18,9 +18,3 @@ The website of [https://idate.pw](https://idate.pw) which is a free dating servi
    ```
 
 4. Open web browser, such as firefox,chrome,IE. Access the URL of http:\\localhost to show login page, input "aa" as username and "11" as password to login.
-
-# Other documents
-
-1. The file of setupGuide.rtf describes how to setup the smartweb framework to develop.
-
-2. The URL of https://github.com/gordon518/smartweb describes the features of the smartweb framework.
