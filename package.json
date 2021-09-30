@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "log4js": "^6.3.0",
-    "smartweb": "^2.0.5",
-    "sqlite3": "^5.0.2"
+    "smartweb": "^2.0.8",
+    "sqlite3": "^4.2.0"
   }
 }
