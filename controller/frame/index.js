@@ -1,4 +1,4 @@
-var smart = require("smartweb");
+﻿var smart = require("smartweb");
 
 module.exports = {
 	get: function(req, res) {

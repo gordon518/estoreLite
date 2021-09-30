@@ -1,4 +1,4 @@
-//before use this function, need to use the following command to install mysql module: 
+﻿//before use this function, need to use the following command to install mysql module: 
 //npm install --save mysql
 //npm install --save async
 

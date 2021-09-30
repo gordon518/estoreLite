@@ -1,4 +1,4 @@
-//before use this function, need to use the following command to install sqlite module: 
+﻿//before use this function, need to use the following command to install sqlite module: 
 //npm i sqlite3 --save
 
 const path = require('path');

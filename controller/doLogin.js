@@ -1,4 +1,4 @@
-var smart = require("smartweb");
+﻿var smart = require("smartweb");
 var  qs=require('querystring')
 var db=require('../model/liteDb');
 
@@ -11,13 +11,13 @@ module.exports = {
 		});
 		req.on("end",function(){
 			var data= Buffer.concat(arr).toString();
-			var ret=null;
+			var param=null;
 			res.writeHead(200, {'Content-Type': 'application/json'});
 			try{
-				ret=qs.parse(data);
-				checkPass(ret,function(flag) {
+				param=qs.parse(data);
+				checkPass(param,function(flag) {
 					if(flag==1) {
-						req.session.username=ret.username;
+						req.session.username=param.username;
 						res.end(JSON.stringify({'code':0,'msg':'check password succcessful'}));		
 					}
 					else {
@@ -31,13 +31,13 @@ module.exports = {
 	}
 };
 
-function checkPass(ret, fn) {
+function checkPass(param, fn) {
 	var flag=0;
-	db.query("select password from users where username=?",[ret.username],function(result){
+	db.query("select password from users where username=?",[param.username],function(result){
 		if(result.rows.length>0) {
 			var row=result.rows[0];
 			var dbPass=row["password"];
-			if(dbPass==ret.password) {
+			if(dbPass==param.password) {
 				flag=1;
 			}
 		}

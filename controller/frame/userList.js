@@ -1,4 +1,4 @@
-var smart = require("smartweb");
+﻿var smart = require("smartweb");
 var db=require('../../model/liteDb');
 
 module.exports = {
