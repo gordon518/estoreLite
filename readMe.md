@@ -17,4 +17,4 @@ The website of [http://idate.pw](http://idate.pw) which is a free dating service
    node ./
    ```
 
-4. Open web browser, such as firefox,chrome,IE. Access the URL of http:\\\\localhost to show login page, input "aa" as username and "11" as password to login.
+4. Open web browser, such as firefox,chrome,IE. Access the URL of http://localhost to show login page, input "aa" as username and "11" as password to login.
