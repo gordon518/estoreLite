@@ -1,7 +1,7 @@
 # Special Feature
 Make difference by innovating frameworks. This demo used the nodejs framework of **smartweb** which is created by myself.
 The url of [https://github.com/gordon518/smartweb](https://github.com/gordon518/smartweb) demonstrated how to use the framework.
-The website of [https://idate.pw](https://idate.pw) which is a free dating service is built with this framework.
+The website of [http://idate.pw](http://idate.pw) which is a free dating service is built with this framework.
 
 # Run app guide
 
